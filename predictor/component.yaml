@@ -12,7 +12,7 @@ outputs:
     type: String
     description: The prediction dataset.
 implementation:
-  container:
+  containers:
     image: None
     command: [
       batch_predictor
