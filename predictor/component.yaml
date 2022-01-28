@@ -9,7 +9,6 @@ inputs:
     description: The number of workers to use for this run.
 outputs:
   - name: Prediction Data
-    type: String
     description: The prediction dataset.
 implementation:
   containers:
