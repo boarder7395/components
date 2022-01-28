@@ -11,7 +11,7 @@ outputs:
   - name: Prediction Data
     description: The prediction dataset.
 implementation:
-  containers:
+  container:
     image: None
     command: [
       batch_predictor
