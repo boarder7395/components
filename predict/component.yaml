@@ -19,5 +19,5 @@ implementation:
     args: [
       --input, {inputValue: Extracted Data},
       --workers, {inputValue: Workers},
-      --output, {outputValue: Prediction Data}
+      --output, {outputPath: Prediction Data}
     ]
