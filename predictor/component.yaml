@@ -13,7 +13,7 @@ outputs:
     description: The prediction dataset.
 implementation:
   container:
-    image: {{ image }}
+    image: None
     command: [
       batch_predictor
     ]
