@@ -1,0 +1,33 @@
+name: Preprocess
+description: Run the preprocessing of Enron dataset.
+inputs:
+  - name: Raw Data
+    type: String
+    description: Path where raw data is stored.
+  - name: Workers
+    type: Integer
+    description: The number of workers to use for this run.
+outputs:
+  - name: TFRecords
+    type: String
+    description: The TFRecord files.
+  - name: Labels
+    type: String
+    description: The indexed label file.
+  - name: Vocab
+    type: String
+    description: The vocab JSON file.
+implementation:
+  container:
+    image: 'ubuntu:20.04'
+    command: [
+      run_preprocess
+    ]
+    args: [
+      --raw-data, {inputValue: Raw Data},
+      --tfrecords, {outputPath: TFRecords},
+      --labels, {outputPath: Labels},
+      --vocab, {outputPath: Vocab},
+      --dask-image, {{ image }},
+      --workers, {inputValue: Workers},
+    ]
